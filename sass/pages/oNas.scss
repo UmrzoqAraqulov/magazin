@@ -1,0 +1,181 @@
+@use "../abstracts/mixins" as mx;
+@import "../global";
+body{
+    background: #F9F4E2;
+}
+.main{
+    .joyi{
+        @include mx.joy;
+    }
+    .header{
+        display: flex;
+        align-items: center;
+        .left{
+            width: 45%;
+            h2{
+                font-size: 50px;
+                font-weight: 900;
+                padding: 20px 0px;
+                color: #414141;
+            }
+            p{
+                font-size: 24px;
+                color: #FF6633;
+            }
+        }
+        .right{
+            width: 60%;
+            background: url(../../image/kompanyInfoImage/icon.png);
+            img{
+                width: 100%;
+            }
+        }
+    }
+    .card{
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
+        .box{
+            width: 37%;
+            padding: 20px 0px;
+            p{
+                font-size: 20px;
+                color: #414141;
+            }
+            h4{
+                color: #414141;
+                font-size: 24px;
+            }
+            &:nth-child(1){
+                width: 25%;
+            }
+        }
+
+    }
+    .coment{
+        display: flex;
+        width: 80%;
+        margin: 0 auto;
+        justify-content: center;
+        gap: 50px;
+        align-items: center;
+        padding: 30px 0px;
+        img{
+            width: 100px;
+        }
+        p{
+            padding: 20px;
+            background: #E5FFDE;
+            color: #70C05B;
+            font-size: 24px;
+            border-radius: 10px;
+        }
+    }
+    @media (max-width:900px){
+        .header{
+            .left{
+                h2{
+                    font-size: 40px;
+                    padding: 20px 0px 10px;
+                }
+                p{
+                    font-size: 20px;
+                }
+            }
+        }
+        .card{
+            flex-wrap: wrap;
+            .box{
+                width: 55%;
+                .text{
+                    p{
+                        font-size: 18px;
+                    }
+                    h4{
+                        font-size: 18px;
+                        padding: 10px 0px;
+                    }
+                }
+                &:nth-child(1){
+                    width: 40%;
+                }
+                &:last-child{
+                    width: 70%;
+                }
+            }
+        }
+        .coment p{
+            font-size: 18px;
+        }
+    }
+    @media (max-width:600px){
+        .joyi{
+            font-size: 16px;
+            .home{
+                font-size: 16px;
+            }
+        }
+        .header{
+            .left{
+                h2{
+                    font-size: 34px;
+                }
+                p{
+                    font-size: 18px;
+                }
+            }
+        }
+        .card{
+            .box{
+                width: 55%;
+                .text{
+                    p{
+                        font-size: 16px;
+                    }
+                    h4{
+                        font-size: 16px;
+                    }
+                }
+                &:last-child{
+                    width: 80%;
+                }
+            }
+        }
+        .coment
+        {
+            img{
+                width: 80px;
+            }
+            p{
+                font-size: 16px;
+                padding: 6px 10px;
+            }
+        } 
+    }
+    @media (max-width:550px){
+        .header{
+            .left{
+                width: 100%;
+                background: url(../../image/kompanyInfoImage/icon.png);
+                
+            }
+            .right{
+                display: none;
+            }
+        }
+        .card{
+            .box{
+                width: 100%;
+                &:last-child,&:nth-child(1){
+                    width: 100%;
+                }
+            }
+        }
+        .coment
+        {
+            flex-wrap: wrap;
+        } 
+    }
+}
+
+@import "../layout/footer"

@@ -1,0 +1,158 @@
+@use "../abstracts/mixins" as mx;
+@import "../global";
+
+body{
+    background: #F9F4E2;
+}
+
+.main{
+    .joyi{
+        @include mx.joy;
+    }
+    h2{
+        font-size: 50px;
+        padding: 50px 0px 30px;
+        color: #242424;
+    }
+    .tex{
+        display: flex;
+        flex-wrap: wrap;
+        gap: 20px;
+        .first{
+            display: flex;
+            gap: 10px;
+            p{
+                font-size: 22px;
+                padding: 0px 0px 10px;
+            }
+            h4{
+                font-size: 18px;
+            }
+        }
+    }
+    h3{
+        font-size: 30px;
+        padding: 20px 0px;
+        color: #414141;
+    }
+    .card{
+        display: flex;
+        gap: 40px;
+        padding: 0px 0px 20px;
+        flex-wrap: wrap;
+        .box{
+            img{
+                width: 80%;
+            }
+            .home{
+                padding: 10px 0px;
+            }
+            .tel{
+                display: inline-block;
+                &:hover{
+                    color: blue;
+                }
+            }
+        }
+    }
+    @media (max-width:700px){
+        .joyi{
+            font-size: 16px;
+            .home{
+                font-size: 16px;
+            }
+        }
+        h2{
+            font-size: 40px;
+        }
+        h3{
+            font-size: 24px;
+        }
+        .tex{
+            .first{
+                .info{
+                    p{
+                        font-size: 18px;
+                    }
+                    h4{
+                        font-size: 16px;
+                    }
+                }
+            }
+        }
+        .card{
+            .box{
+                img{
+                    width: 70%;
+                }
+            }
+        }
+    }
+    .ap-tab{
+        &-list{
+         display: flex;
+         flex-wrap: wrap;
+         gap: 20px;
+         padding: 0px 0px 30px;
+        }
+        &-item{
+         padding: 6px 16px;
+         background: #cecdcd;
+         color: #262626;
+         border-radius: 4px;
+         &:hover{
+             color: white;
+             background: #70C05B;
+         }
+        }
+        @media (max-width:950px){
+         &-content{
+             iframe{
+                 height: 350px;
+             }
+            }
+        }
+        @media (max-width:700px){
+         &-list{
+             font-size: 15px;
+             gap: 10px;
+         }
+         &-content{
+             iframe{
+                 height: 300px;
+             }
+            }
+        }
+        @media (max-width:550px){
+ 
+         &-content{
+             iframe{
+                 height: 250px;
+             }
+            }
+        }
+        @media (max-width:350px){
+ 
+         &-content{
+             iframe{
+                 height: 200px;
+             }
+            }
+        }
+     }
+     @media (max-width:600px){
+         h2{
+             font-size: 30px;
+         }
+     }
+     @media (max-width:400px){
+         h2{
+             font-size: 26px;
+         }
+         .ap-tab-list{
+             font-size: 14px;
+         }
+     }
+}
+
+@import "../layout/footer"

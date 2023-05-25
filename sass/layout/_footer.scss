@@ -1,0 +1,129 @@
+.footer {
+    padding: 30px 0px;
+    background: linear-gradient(rgba(86, 85, 85, 0.13), rgba(94, 93, 93, 0.114)), url(../../image/homeImage/logo_ft.png);
+
+    &_top {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+        .menu {
+            display: flex;
+            justify-content: space-between;
+            width: 60%;
+
+            .item {
+                transition: .4s;
+            }
+
+            .item:hover {
+                color: blue;
+            }
+        }
+
+        .boglanish {
+            display: flex;
+            gap: 20px;
+            align-items: center;
+
+            .ij_tarmoqlar {
+                display: flex;
+                gap: 10px;
+                font-size: 24px;
+
+                i {
+                    cursor: pointer;
+                }
+
+                .tel {
+                    padding-left: 30px;
+                }
+
+                .fa-instagram {
+                    color: rgb(255, 0, 208);
+                }
+
+                .fa-vk {
+                    background: rgb(0, 81, 255);
+                    height: 23px;
+                    border-radius: 3px;
+                    color: white;
+                }
+
+                .fa-facebook {
+                    color: rgb(0, 76, 255);
+                }
+
+                .fa-odnoklassniki {
+                    color: #EE8208;
+                }
+            }
+
+            .tel:hover {
+                color: rgb(0, 55, 255);
+            }
+        }
+
+    }
+    &_bottom{
+        display: flex;
+        gap: 8px;
+        align-items: center;
+        color: #414141;
+        justify-content: end;
+        padding: 10px 0px;
+        img{
+            width: 80px;
+            height: 14px;
+        }
+    }
+    @media (max-width:1024px){
+        &_top{
+            .menu{
+                width: 50%;
+                flex-wrap: wrap;
+                row-gap: 10px;
+            }
+        }
+    }
+    @media (max-width:750px){
+        &_top{
+            .menu{
+                width: 60%;
+            }
+            .boglanish{
+                flex-direction: column;
+            }
+        }
+        &_bottom{
+            display: none;
+        }
+    }
+    @media (max-width:550px){
+        margin-bottom: 50px;
+        &_top{
+            .menu{
+                width: 50%;
+                justify-content: center;
+                gap: 15px;
+                .item:last-child{
+                    display: none;
+                }
+            }
+        }
+    }
+    @media (max-width:440px){
+        &_top{
+            row-gap: 20px;
+            flex-wrap: wrap;
+            .boglanish{
+                width: 100%;
+                flex-direction: row;
+                flex-wrap: wrap;
+            }
+            .menu{
+                width: 70%;
+            }
+        }
+    }
+}
