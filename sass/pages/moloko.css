@@ -225,10 +225,6 @@ img {
   }
 }
 
-body {
-  background: #F9F4E2;
-}
-
 .main .joyi {
   display: flex;
   gap: 20px;
@@ -243,124 +239,31 @@ body {
   color: #8F8F8F;
 }
 .main h2 {
-  font-size: 50px;
-  padding: 50px 0px 30px;
-  color: #242424;
-}
-.main .tex {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 20px;
-}
-.main .tex .first {
-  display: flex;
-  gap: 10px;
-}
-.main .tex .first p {
-  font-size: 22px;
-  padding: 0px 0px 10px;
-}
-.main .tex .first h4 {
-  font-size: 18px;
-}
-.main h3 {
-  font-size: 30px;
   padding: 20px 0px;
+  font-size: 50px;
   color: #414141;
 }
 .main .card {
-  display: flex;
-  gap: 40px;
-  padding: 0px 0px 20px;
-  flex-wrap: wrap;
-}
-.main .card .box img {
-  width: 80%;
-}
-.main .card .box .home {
-  padding: 10px 0px;
-}
-.main .card .box .tel {
-  display: inline-block;
-}
-.main .card .box .tel:hover {
-  color: blue;
-}
-@media (max-width: 700px) {
-  .main .joyi {
-    font-size: 16px;
-  }
-  .main .joyi .home {
-    font-size: 16px;
-  }
-  .main h2 {
-    font-size: 40px;
-  }
-  .main h3 {
-    font-size: 24px;
-  }
-  .main .tex .first .info p {
-    font-size: 18px;
-  }
-  .main .tex .first .info h4 {
-    font-size: 16px;
-  }
-  .main .card .box img {
-    width: 70%;
-  }
-}
-.main .ap-tab-list {
-  display: flex;
-  flex-wrap: wrap;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
   gap: 20px;
-  padding: 0px 0px 30px;
+  padding: 30px 0px 50px;
 }
-.main .ap-tab-item {
-  padding: 6px 16px;
-  background: #cecdcd;
-  color: #262626;
-  border-radius: 4px;
-}
-.main .ap-tab-item:hover {
+.main .card .box {
+  height: 200px;
+  display: flex;
+  align-items: end;
+  padding: 10px;
+  position: relative;
   color: white;
-  background: #70C05B;
+  border-radius: 4px;
+  background-repeat: no-repeat;
+  font-size: 18px;
+  background: linear-gradient(180deg, rgba(112, 192, 91, 0) 0%, #70C05B 82.81%), url(../../image/homeImage/sut.png);
+  grid-column: 1/3;
 }
-@media (max-width: 950px) {
-  .main .ap-tab-content iframe {
-    height: 350px;
-  }
-}
-@media (max-width: 700px) {
-  .main .ap-tab-list {
-    font-size: 15px;
-    gap: 10px;
-  }
-  .main .ap-tab-content iframe {
-    height: 300px;
-  }
-}
-@media (max-width: 550px) {
-  .main .ap-tab-content iframe {
-    height: 250px;
-  }
-}
-@media (max-width: 350px) {
-  .main .ap-tab-content iframe {
-    height: 200px;
-  }
-}
-@media (max-width: 600px) {
-  .main h2 {
-    font-size: 30px;
-  }
-}
-@media (max-width: 400px) {
-  .main h2 {
-    font-size: 26px;
-  }
-  .main .ap-tab-list {
-    font-size: 14px;
-  }
+.main .card .box:hover {
+  background: linear-gradient(180deg, rgba(255, 102, 51, 0) 0%, #FF6633 100%), url(../../image/homeImage/sut.png);
 }
 
 .footer {
@@ -473,4 +376,4 @@ body {
   .footer_top .menu {
     width: 70%;
   }
-}/*# sourceMappingURL=kontact.css.map */
+}/*# sourceMappingURL=moloko.css.map */

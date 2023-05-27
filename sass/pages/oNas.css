@@ -42,6 +42,42 @@ img {
   justify-content: space-between;
   align-items: center;
 }
+.nav .tovarlar {
+  position: fixed;
+  top: 80px;
+  left: 0;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  padding: 20px 5%;
+  background: white;
+  width: 100%;
+  display: none;
+}
+.nav .tovarlar li {
+  padding: 8px 0px;
+  transition: 0.4s;
+}
+.nav .tovarlar li:hover {
+  color: #FF6633;
+}
+@media (max-width: 900px) {
+  .nav .tovarlar {
+    top: 60px;
+    grid-template-columns: 1.5fr 1fr 1fr;
+  }
+}
+@media (max-width: 550px) {
+  .nav .tovarlar {
+    top: 50px;
+    grid-template-columns: 1fr 1fr;
+  }
+  .nav .tovarlar li:nth-child(1), .nav .tovarlar li:nth-child(4), .nav .tovarlar li:nth-child(6), .nav .tovarlar li:nth-child(12), .nav .tovarlar li:last-child {
+    display: none;
+  }
+}
+.nav .tv {
+  display: grid;
+}
 .nav .logo {
   width: 150px;
 }

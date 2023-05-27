@@ -10,7 +10,40 @@
          justify-content: space-between;
          align-items: center;
      }
-
+     .tovarlar{
+        position: fixed;
+        top: 80px;
+        left: 0;
+        display: grid;
+        grid-template-columns: repeat(4,1fr);
+        padding: 20px 5%;
+        background: white;
+        width: 100%;
+        display: none;
+        li{
+            padding: 8px 0px;
+            transition: .4s;
+            &:hover{
+                color: #FF6633;
+            }
+        }
+        @media(max-width:900px){
+            top: 60px;
+            grid-template-columns: (1.5fr 1fr 1fr);
+        }
+        @media(max-width:550px){
+            top: 50px;
+            grid-template-columns: (1fr 1fr);
+            li{
+                &:nth-child(1),&:nth-child(4),&:nth-child(6),&:nth-child(12),&:last-child{
+                    display: none;
+                }
+            }
+        }
+    }
+    .tv{
+        display: grid;
+    }
      .logo {
          width: 150px;
 
