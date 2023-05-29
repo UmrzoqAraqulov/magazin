@@ -379,6 +379,9 @@ body {
   right: 0;
 }
 .aksiya .card .box .img {
+  height: 180px;
+  display: flex;
+  align-items: center;
   position: relative;
   overflow: hidden;
 }
@@ -395,13 +398,22 @@ body {
   font-size: 18px;
   border-radius: 3px;
   transition: 0.5s;
+  z-index: 1;
 }
 .aksiya .card .box .img .heard:hover {
   color: red;
 }
+.aksiya .card .box .text {
+  padding: 10px 0px;
+}
 .aksiya .card .box .info {
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
   font-size: 16px;
   color: #414141;
+  margin: 0px 0px 10px;
 }
 .aksiya .card .box .stars {
   padding: 8px 0px;
@@ -573,6 +585,9 @@ body {
 }
 .yangilar .card .box .img,
 .sotuvda .card .box .img {
+  height: 180px;
+  display: flex;
+  align-items: center;
   position: relative;
   overflow: hidden;
 }
@@ -591,15 +606,25 @@ body {
   font-size: 18px;
   border-radius: 3px;
   transition: 0.5s;
+  z-index: 1;
 }
 .yangilar .card .box .img .heard:hover,
 .sotuvda .card .box .img .heard:hover {
   color: red;
 }
+.yangilar .card .box .text,
+.sotuvda .card .box .text {
+  padding: 10px 0px;
+}
 .yangilar .card .box .info,
 .sotuvda .card .box .info {
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
   font-size: 16px;
   color: #414141;
+  margin: 0px 0px 10px;
 }
 .yangilar .card .box .stars,
 .sotuvda .card .box .stars {

@@ -4,39 +4,39 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Молоко, сыр, яйцо</title>
+    <link rel="stylesheet" href="sass/pages/all_products.css">
     <link rel="icon" href="image/homeImage/lcon.png">
-    <link rel="stylesheet" href="../sass/pages/moloko.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+    <title>All Products</title>
 </head>
 <body>
     <div class="nav">
         <div class="container">
             <div class="logo">
-                <a href="../index.html">
-                    <img src="../image/homeImage/logo.png" alt="">
+                <a href="index.html">
+                    <img src="image/homeImage/logo.png" alt="">
                 </a>
             </div>
             <div class="bar">
                 <div class="icon">
                     <i class="fa-solid fa-bars"></i>
                 </div>
-                <a href="../katalog.html">Каталог</a>
+                <a href="katalog.html">Каталог</a>
             </div>
             <ul class="tovarlar">
-                <li><a href="milks.html">Молоко, сыр, яйцо</a></li>
-                <li><a href="napitki.html">Напитки</a></li>
-                <li><a href="food.html">Бакалея</a></li>
-                <li><a href="nonFoodProducts.html">Непродовольственные товары</a></li>
-                <li><a href="breads.html">Хлеб</a></li>
-                <li><a href="confectioneryProducts.html">Кондитерские изделия</a></li>
-                <li><a href="healthyEating.html">Здоровое питание</a></li>
-                <li><a href="babyFood.html">Детское питание</a></li>
-                <li><a href="fruits.html">Фрукты и овощи</a></li>
-                <li><a href="teaKofee.html">Чай, кофе</a></li>
-                <li><a href="petSupplies.html">Зоотовары</a></li>
-                <li><a href="meat.html">Мясо, птица, колбаса</a></li>
-                <li><a href="frozenProducts.html">Замороженные продукты</a></li>
+                <li><a href="html/milks.html">Молоко, сыр, яйцо</a></li>
+                <li><a href="html/napitki.html">Напитки</a></li>
+                <li><a href="html/food.html">Бакалея</a></li>
+                <li><a href="html/nonFoodProducts.html">Непродовольственные товары</a></li>
+                <li><a href="html/breads.html">Хлеб</a></li>
+                <li><a href="html/confectioneryProducts.html">Кондитерские изделия</a></li>
+                <li><a href="html/healthyEating.html">Здоровое питание</a></li>
+                <li><a href="html/babyFood.html">Детское питание</a></li>
+                <li><a href="html/fruits.html">Фрукты и овощи</a></li>
+                <li><a href="html/teaKofee.html">Чай, кофе</a></li>
+                <li><a href="html/petSupplies.html">Зоотовары</a></li>
+                <li><a href="html/meat.html">Мясо, птица, колбаса</a></li>
+                <li><a href="html/frozenProducts.html">Замороженные продукты</a></li>
             </ul>
             <div class="search">
                 <input type="text" class="tex" placeholder="Найти товар">
@@ -46,7 +46,7 @@
                 <li class="item bar1">
                     <a href="#">
                         <i class="fa-solid fa-bars"></i>
-                        <a href="../katalog.html">Каталог</a>
+                        <a href="katalog.html">Каталог</a>
                     </a>
                 </li>
                 <li class="item">
@@ -77,74 +77,41 @@
             </ul>
         </div>
     </div>
-    <div class="main container">
-        <div class="joyi">
-            <a href="../index.html" class="home">Главная</a>
-            <i class="fa-solid fa-chevron-right"></i>
-            <a href="../katalog.html" class="home">Каталог</a>
-            <i class="fa-solid fa-chevron-right"></i>
-            <a href="milks.html" class="page">Молоко, сыр, яйцо</a>
-        </div>
-        <h2>Молоко, сыр, яйцо</h2>
 
-        <div class="card">
-            <a href="#" class="box">
-                Молоко
-            </a>
-            <a href="#" class="box">
-                Молоко
-            </a>
-            <a href="#" class="box">
-                Молоко
-            </a>
-            <a href="#" class="box">
-                Молоко
-            </a>
-            <a href="#" class="box">
-                Молоко
-            </a>
-            <a href="#" class="box">
-                Молоко
-            </a>
-            <a href="#" class="box">
-                Молоко
-            </a>
-            <a href="#" class="box">
-                Молоко
-            </a>
-            <a href="#" class="box">
-                Молоко
-            </a>
-            <a href="#" class="box">
-                Молоко
-            </a>
-            <a href="#" class="box">
-                Молоко
-            </a>
-            <a href="#" class="box">
-                Молоко
-            </a>
+    <main class="container">
+        <div class="joyi">
+            <a href="index.html" class="home">Главная</a>
+            <i class="fa-solid fa-chevron-right"></i>
+            <a href="all_products.html" class="page">Все продукты</a>
         </div>
-    </div>
-       
+        <h2>
+            Все продукты
+        </h2>
+
+        <!-- card -->
+        <div class="card"></div>
+
+        <!-- paginition -->
+        <ul class="paginition"> </ul>
+    </main>
 
     <div class="footer">
         <div class="container">
             <div class="footer_top">
                 <div class="logo">
-                    <a href="../index.html">
-                        <img src="../image/homeImage/logo_footer.png" alt="">
+                    <a href="index.html">
+                        <img src="image/homeImage/logo_footer.png" alt="">
                     </a>
                 </div>
                 <ul class="menu">
                     <li class="item">
-                        <a href="../oNas.html">О компании</a>
+                        <a href="oNas.html">О компании</a>
                     </li>
                     <li class="item">
-                        <a href="../kontact.html">Контакты</a>
+                        <a href="kontact.html">Контакты</a>
                     </li>
                     <li class="item">
-                        <a href="../vakansiya.html">Вакансии</a>
+                        <a href="vakansiya.html">Вакансии</a>
                     </li>
                     <li class="item">
                         <a href="#">Статьи</a>
@@ -169,12 +136,16 @@
             </div>
             <div class="footer_bottom">
                 <p>Дизайн</p>
-                <img src="../image/homeImage/footer_bottom.png" alt="">
+                <img src="image/homeImage/footer_bottom.png" alt="">
             </div>
         </div>
     </div>
 
-    <script src="../js/katalog.js"></script>
 
+    <script src="js/katalog.js"></script>
+
+    <script src="js/reyting.js"></script>
+    <script src="js/products.js"></script>
+    <script src="js/all_products.js"></script>
 </body>
 </html>

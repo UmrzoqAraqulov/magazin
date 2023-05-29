@@ -1,5 +1,7 @@
 let card = document.querySelector(".yangilar .card");
 
+let card2 = document.querySelector(".sotilgan .card");
+
 function productCard({image, rating, price, description}) {
     let box = `<div class="box">
     <div class="img">
@@ -21,12 +23,16 @@ function productCard({image, rating, price, description}) {
 return box;
 }
 
-let element = products.slice(-5,-1).filter((el) => el.discount > 0);
+let element = products.slice(-20,-16).filter((el) => el.discount > 0);
+let element2 = products.slice(-5,-1).filter((el) => el.discount > 0);
 let cardValue = "";
 for(box of element){
     cardValue += productCard(box);
 }
-
-console.log(cardValue);
-
+let cardValue2 = "";
+for(box of element2){
+    cardValue2 += productCard(box);
+}
+console.log(cardValue2);
 card.innerHTML = cardValue;
+card2.innerHTML = cardValue2;

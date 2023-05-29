@@ -1,88 +1,20 @@
-@mixin joy{
+@mixin joy {
     display: flex;
     gap: 20px;
     align-items: center;
     margin-top: 110px;
-    .home{
+
+    .home {
         color: black;
         font-size: 18px;
     }
-    .page{
+
+    .page {
         color: #8F8F8F;
     }
 }
 
-@mixin sec {
-    padding: 50px 0px 10px;
-
-    .text {
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        padding: 20px 0px;
-
-        h3 {
-            font-size: 38px;
-            font-weight: 700;
-        }
-
-        .hammasi {
-            display: flex;
-            align-items: center;
-            gap: 15px;
-            color: #606060;
-            transition: 0.4s;
-            font-size: 16px;
-
-            &:hover {
-                color: blue;
-            }
-        }
- 
-        @media(max-width: 750px) {
-            h3 {
-                font-size: 34px;
-            }
-        }
-
-        @media(max-width: 650px) {
-            h3 {
-                font-size: 30px;
-            }
-        }
-
-        @media(max-width: 550px) {
-            h3 {
-                font-size: 26px;
-            }
-
-            .hammasi {
-                font-size: 14px;
-
-                i {
-                    font-size: 12px;
-                }
-            }
-        }
-
-        @media(max-width: 400px) {
-            align-items: center;
-
-            h3 {
-                font-size: 24px;
-            }
-
-            .hammasi {
-                width: 130px;
-                font-size: 13px;
-
-                i {
-                    font-size: 12px;
-                }
-            }
-        }
-    }
-
+@mixin card {
     .card {
         display: flex;
         justify-content: space-between;
@@ -109,10 +41,14 @@
             }
 
             .img {
+                height: 180px;
+
                 img {
                     width: 100%;
                 }
 
+                display: flex;
+                align-items: center;
                 position: relative;
                 overflow: hidden;
 
@@ -126,16 +62,24 @@
                     font-size: 18px;
                     border-radius: 3px;
                     transition: .5s;
-
+                    z-index: 1;
                     &:hover {
                         color: red;
                     }
                 }
             }
 
+            .text{
+                padding: 10px 0px;
+            }
             .info {
+                display: -webkit-box;
+                -webkit-line-clamp: 2;
+                -webkit-box-orient: vertical;
+                overflow: hidden;
                 font-size: 16px;
                 color: #414141;
+                margin: 0px 0px 10px;
             }
 
             .stars {
@@ -188,4 +132,79 @@
             width: 100%;
         }
     }
+}
+
+@mixin sec {
+    padding: 50px 0px 10px;
+
+    .text {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 20px 0px;
+
+        h3 {
+            font-size: 38px;
+            font-weight: 700;
+        }
+
+        .hammasi {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+            color: #606060;
+            transition: 0.4s;
+            font-size: 16px;
+
+            &:hover {
+                color: blue;
+            }
+        }
+
+        @media(max-width: 750px) {
+            h3 {
+                font-size: 34px;
+            }
+        }
+
+        @media(max-width: 650px) {
+            h3 {
+                font-size: 30px;
+            }
+        }
+
+        @media(max-width: 550px) {
+            h3 {
+                font-size: 26px;
+            }
+
+            .hammasi {
+                font-size: 14px;
+
+                i {
+                    font-size: 12px;
+                }
+            }
+        }
+
+        @media(max-width: 400px) {
+            align-items: center;
+
+            h3 {
+                font-size: 24px;
+            }
+
+            .hammasi {
+                width: 130px;
+                font-size: 13px;
+
+                i {
+                    font-size: 12px;
+                }
+            }
+        }
+    }
+
+    @include card;
+
 }
