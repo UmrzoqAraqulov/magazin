@@ -23,8 +23,8 @@ function productCard({image, rating, price, description}) {
 return box;
 }
 
-let element = products.slice(-20,-16).filter((el) => el.discount > 0);
-let element2 = products.slice(-5,-1).filter((el) => el.discount > 0);
+let element = products.filter((el) => el.discount > 0);
+let element2 = products.filter((el) => el.discount > 0);
 let cardValue = "";
 for(box of element){
     cardValue += productCard(box);
@@ -33,6 +33,6 @@ let cardValue2 = "";
 for(box of element2){
     cardValue2 += productCard(box);
 }
-console.log(cardValue2);
+
 card.innerHTML = cardValue;
 card2.innerHTML = cardValue2;

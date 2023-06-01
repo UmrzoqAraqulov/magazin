@@ -30,6 +30,10 @@ img {
   }
 }
 
+.owl-theme .owl-dots, .owl-theme .owl-nav {
+  display: none;
+}
+
 .nav {
   width: 100%;
   padding: 20px 0px;
@@ -225,22 +229,151 @@ img {
   }
 }
 
+#open {
+  background: transparent;
+  border: none;
+}
+
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: transparent;
+  z-index: -1;
+  transition: 1s;
+}
+
+.modal-overlay-show {
+  background: rgba(252, 213, 186, 0.8);
+  z-index: 10;
+}
+
+.modal {
+  transform: translateY(-1000%);
+  padding: 50px;
+  max-width: 600px;
+  background-color: white;
+  border-radius: 5px;
+  transition: 1s;
+  position: relative;
+}
+.modal button {
+  cursor: pointer;
+}
+.modal .modal-header {
+  text-align: left;
+}
+.modal .modal-header h3 {
+  font-size: 24px;
+  padding: 20px 0px;
+  text-align: center;
+}
+.modal .modal-header p {
+  font-size: 18px;
+  color: #8F8F8F;
+}
+.modal .modal-header .num {
+  border: 1px solid #70C05B;
+  background: white;
+  padding: 10px 15px;
+  font-size: 20px;
+  border-radius: 4px;
+  width: 100%;
+}
+.modal .modal-header .kirish {
+  display: block;
+  padding: 10px 20px;
+  width: 100%;
+  text-align: center;
+  margin: 20px 0px;
+  background: #FCD5BA;
+  color: #FF6633;
+  border: none;
+  border-radius: 4px;
+  font-size: 24px;
+}
+.modal .modal-header .registr {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  align-items: center;
+}
+.modal .modal-header .registr a:nth-child(1) {
+  border: 1px solid #70C05B;
+  color: #70C05B;
+  padding: 8px 15px;
+  border-radius: 4px;
+  font-size: 18px;
+}
+.modal .modal-header .registr a:last-child {
+  color: #606060;
+  font-size: 18px;
+}
+.modal .modal-close {
+  position: absolute;
+  top: 15px;
+  right: 15px;
+  font-size: 20px;
+  cursor: pointer;
+}
+.modal .modal-close:hover {
+  color: #636262;
+}
+
+.modal-show {
+  transform: translateY(0);
+}
+
+@media (max-width: 600px) {
+  .modal-overlay .modal {
+    padding: 30px;
+  }
+  .modal-overlay .modal-header h3 {
+    font-size: 20px;
+  }
+  .modal-overlay .modal-header p {
+    font-size: 14px;
+  }
+  .modal-overlay .modal-header .num {
+    font-size: 16px;
+  }
+  .modal-overlay .modal-header .kirish {
+    font-size: 16px;
+  }
+  .modal-overlay .modal-header .registr {
+    flex-wrap: wrap;
+  }
+  .modal-overlay .modal-header .registr a:nth-child(1) {
+    font-size: 16px;
+  }
+  .modal-overlay .modal-header .registr a:nth-child(2) {
+    font-size: 16px;
+  }
+}
 body {
   background: #F9F4E2;
 }
 
 .main .joyi {
   display: flex;
-  gap: 20px;
+  gap: 10px;
+  flex-wrap: wrap;
   align-items: center;
   margin-top: 110px;
+  font-size: 14px;
 }
 .main .joyi .home {
   color: black;
-  font-size: 18px;
+  font-size: 15px;
 }
 .main .joyi .page {
   color: #8F8F8F;
+  font-size: 15px;
 }
 .main h2 {
   font-size: 50px;

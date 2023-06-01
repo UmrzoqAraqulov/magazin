@@ -9,6 +9,20 @@
     <link rel="icon" href="image/homeImage/lcon.png">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
     <link rel="stylesheet" href="sass/pages/home.css">
+    <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css"
+    integrity="sha512-tS3S5qG0BlhnQROyJXvNjeEM4UpMXHrQfTGmbQ1gKmelCxlSEBUaxhRBj/EFTzpbP4RVSrpEikbmdJobCvhE3g=="
+    crossorigin="anonymous"
+    referrerpolicy="no-referrer"
+  /> 
+  <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css"
+    integrity="sha512-sMXtMNL1zRzolHYKEujM2AqCLUR9F2C4/05cdbxjjLSRvMQIciEPCQZo++nk7go3BtSuK9kfa/s+a4f4i5pLkw=="
+    crossorigin="anonymous"
+    referrerpolicy="no-referrer"
+  />
 </head>
 
 <body>
@@ -48,7 +62,6 @@
                 <li class="item bar1">
                     <a href="#">
                         <i class="fa-solid fa-bars"></i>
-                        <a href="katalog.html">Каталог</a>
                     </a>
                 </li>
                 <li class="item">
@@ -58,9 +71,9 @@
                     </a>
                 </li>
                 <li class="item">
-                    <a href="#">
+                    <a href="all_products.html">
                         <i class="fa-solid fa-box"></i>
-                        <p>Заказы</p>
+                        <p>продукты</p>
                     </a>
                 </li>
                 <li class="item">
@@ -69,13 +82,34 @@
                         <p>Корзина</p>
                     </a>
                 </li>
-                <li class="item user">
-                    <img src="image/homeImage/Aleksy.png" alt="">
-                    <a href="#">
-                        <p>Алексей</p>
-                        <i class="fa-solid fa-chevron-down"></i>
-                    </a>
-                </li>
+                <button id="open">
+                    <li class="item user">
+                        <img src="image/homeImage/Aleksy.png" alt="">
+                        <a href="#">
+                            <p>Алексей</p>
+                            <i class="fa-solid fa-chevron-down"></i>
+                        </a>
+                    </li>
+                </button>
+                <div class="modal-overlay">
+                    <div class="modal">
+                      <div class="modal-header">
+                        <h3>Вход</h3>
+                        <p>Телефон</p>
+                        <input class="num" type="text" placeholder="+998 91 777 77 77">
+                        <button class="kirish">Вход</button>
+                        <div class="registr">
+                            <a href="#">Регистрация</a>
+                            <a href="#">Забыли пароль?</a>
+                        </div>
+                      </div>
+                      <div class="modal-body"></div>
+                      <div class="modal-close">
+                        <i class="fa-solid fa-xmark"></i>
+                      </div>
+                    </div>
+                  </div>
+                
             </ul>
         </div>
     </div>
@@ -92,8 +126,8 @@
                 <i class="fa-solid fa-chevron-right"></i>
             </a>
         </div>
-        <div class="card">
-            
+        <div class="card owl-carousel owl-theme">
+
         </div>
     </div>
     <div class="yangilar container">
@@ -104,7 +138,7 @@
                 <i class="fa-solid fa-chevron-right"></i>
             </a>
         </div>
-        <div class="card">
+        <div class="card owl-carousel owl-theme">
             <img src="" alt="">
         </div>
     </div>
@@ -117,8 +151,8 @@
                 <i class="fa-solid fa-chevron-right"></i>
             </a>
         </div>
-        <div class="card">
-            
+        <div class="card owl-carousel owl-theme">
+
         </div>
     </div>
 
@@ -163,19 +197,31 @@
         </div>
         <div class="ap-tab-container">
             <div class="ap-tab-content">
-                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d19752085.67590486!2d19.987650770606223!3d52.81978141071809!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4410d5a8411f827f%3A0x5c72d03a44b4112d!2sChasovnya%20V%20Shchel&#39;ye!5e0!3m2!1suz!2s!4v1684962169094!5m2!1suz!2s" width="100%" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
-            </div>
-            
-            <div class="ap-tab-content">
-                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d26674.94323673596!2d53.123708139295836!3d65.30047031461623!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4472361e784c1655%3A0x661864025b65a5e0!2sVertep%2C%20Komi%2C%20Rossiya%2C%20169473!5e0!3m2!1suz!2s!4v1684962229461!5m2!1suz!2s" width="100%" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
-            </div>
-
-            <div class="ap-tab-content">
-                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d8943.73578293436!2d42.67485060756837!3d55.91584569594145!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x414ef66a8b62cebb%3A0x3a4fd87e1e54cf9f!2sKrasno%2C%20Nijegorod%20viloyati%2C%20Rossiya%2C%20606150!5e0!3m2!1suz!2s!4v1684962303191!5m2!1suz!2s" width="100%" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                <iframe
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d19752085.67590486!2d19.987650770606223!3d52.81978141071809!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4410d5a8411f827f%3A0x5c72d03a44b4112d!2sChasovnya%20V%20Shchel&#39;ye!5e0!3m2!1suz!2s!4v1684962169094!5m2!1suz!2s"
+                    width="100%" height="450" style="border:0;" allowfullscreen="" loading="lazy"
+                    referrerpolicy="no-referrer-when-downgrade"></iframe>
             </div>
 
             <div class="ap-tab-content">
-                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d8869.168363807132!2d43.407644209961184!3d56.23846555199107!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x414e3af771db53cd%3A0x9a09924cff9d36b9!2sDiyur!5e0!3m2!1suz!2s!4v1684962336077!5m2!1suz!2s" width="100%" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                <iframe
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d26674.94323673596!2d53.123708139295836!3d65.30047031461623!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4472361e784c1655%3A0x661864025b65a5e0!2sVertep%2C%20Komi%2C%20Rossiya%2C%20169473!5e0!3m2!1suz!2s!4v1684962229461!5m2!1suz!2s"
+                    width="100%" height="450" style="border:0;" allowfullscreen="" loading="lazy"
+                    referrerpolicy="no-referrer-when-downgrade"></iframe>
+            </div>
+
+            <div class="ap-tab-content">
+                <iframe
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d8943.73578293436!2d42.67485060756837!3d55.91584569594145!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x414ef66a8b62cebb%3A0x3a4fd87e1e54cf9f!2sKrasno%2C%20Nijegorod%20viloyati%2C%20Rossiya%2C%20606150!5e0!3m2!1suz!2s!4v1684962303191!5m2!1suz!2s"
+                    width="100%" height="450" style="border:0;" allowfullscreen="" loading="lazy"
+                    referrerpolicy="no-referrer-when-downgrade"></iframe>
+            </div>
+
+            <div class="ap-tab-content">
+                <iframe
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d8869.168363807132!2d43.407644209961184!3d56.23846555199107!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x414e3af771db53cd%3A0x9a09924cff9d36b9!2sDiyur!5e0!3m2!1suz!2s!4v1684962336077!5m2!1suz!2s"
+                    width="100%" height="450" style="border:0;" allowfullscreen="" loading="lazy"
+                    referrerpolicy="no-referrer-when-downgrade"></iframe>
             </div>
         </div>
     </div>
@@ -221,7 +267,7 @@
                     <h4>ЗОЖ или ФАСТФУД. А вы на чьей</h4>
                     <p class="tex">
                         Голосуйте за любимые категории, выбирайте категорию-победителя в мобильном приложении и
-                        получайте кешбэк 10% баллами в апреле! баллами 
+                        получайте кешбэк 10% баллами в апреле! баллами
                     </p>
                     <button class="btn">Подробнее</button>
                 </div>
@@ -260,7 +306,7 @@
                         <i class="fa-brands fa-vk"></i>
                         <i class="fa-brands fa-facebook"></i>
                         <i class="fa-brands fa-odnoklassniki"></i>
-                        
+
                     </div>
                     <a class="tel" href="tel:8 800 777 33 33">
                         <i class="fa-solid fa-phone"></i>
@@ -284,7 +330,22 @@
 
     <script src="js/card_aksiya.js"></script>
     <script src="js/card_new.js"></script>
+    <script src="js/modal.js"></script>
+
+    <script
+    src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.0/jquery.min.js"
+    integrity="sha512-3gJwYpMe3QewGELv8k/BX9vcqhryRdzRMxVfq6ngyWXwo03GFEzjsUm8Q7RZcHPHksttq7/GFoxjCVUjkjvPdw=="
+    crossorigin="anonymous"
+    referrerpolicy="no-referrer"
+  ></script>
+  <script
+    src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"
+    integrity="sha512-bPs7Ae6pVvhOSiIcyUClR7/q2OAsRiovw4vAkX+zJbw3ShAeeqezq50RIIcIURq7Oa20rW2n2q+fyXBNcU9lrw=="
+    crossorigin="anonymous"
+    referrerpolicy="no-referrer"
+  ></script>
+    <script src="js/owl-carusel.js"></script>
 
 </body>
- 
+
 </html>

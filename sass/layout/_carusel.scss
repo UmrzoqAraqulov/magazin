@@ -1,0 +1,10 @@
+.carusel{
+    overflow-y: hidden;
+}
+.carusel-items{
+    display: flex;
+    gap: 20px;
+}
+.carusel-item{
+    border: 1px solid black;
+}

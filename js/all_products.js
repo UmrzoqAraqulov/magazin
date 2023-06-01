@@ -1,7 +1,6 @@
 let card = document.querySelector(".card");
 let search = document.querySelector(".search .tex");
 
-console.log(search);
 let paginition = document.querySelector(".paginition");
 
 let limit = 10,active = 0, search_value = "";
@@ -42,30 +41,39 @@ function page_boxes() {
     
     
     let  pages_count = Math.ceil(searchProducts.length / limit);
-
-    let item;
-    if(active != 0){
-        item = `<li  class="page-item">
-        <span class="page-link">Previous</span>
-      </li>`;
+    let item = "";
+    if(searchProducts.length > limit){
+        if(active != 0){
+            item = `<li onclick="getPage(${--active})"  class="page-item">
+            <span class="page-link">Previous</span>
+          </li>`;
+        }
+        else{
+            item = `<li onclick="getPage(${--active})" class="page-item disabled">
+            <span class="page-link">Previous</span>
+          </li>`
+        }
     }
-    else{
-        item = `<li class="page-item disabled">
-        <span class="page-link">Previous</span>
-      </li>`
-    }
-    
-
+    active++;
     for (let i = 0; i < pages_count; i++) {
         item += `<li onclick="getPage(${i})" class="page-item ${
             i == active ? "active" : ""
           }"><span class="page-link">${i + 1}</span></li>`
     }
 
-    item += `<li class="page-item">
+    if(searchProducts.length > limit){
+        if(active == pages_count - 1){
+            item += `<li onclick="getPage(${++active})" class="page-item">
+    <span class="page-link disabled">Next</span>
+    </li>`
+        }
+        else{
+            item += `<li onclick="getPage(${++active})" class="page-item">
     <span class="page-link">Next</span>
     </li>`
-
+        }
+    }
+    active--;
     paginition.innerHTML = item;
 
 }

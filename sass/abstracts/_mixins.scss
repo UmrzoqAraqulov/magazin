@@ -1,16 +1,19 @@
 @mixin joy {
     display: flex;
-    gap: 20px;
+    gap: 10px;
+    flex-wrap: wrap;
     align-items: center;
     margin-top: 110px;
+    font-size: 14px;
 
     .home {
         color: black;
-        font-size: 18px;
+        font-size: 15px;
     }
 
     .page {
         color: #8F8F8F;
+        font-size: 15px;
     }
 }
 
@@ -84,6 +87,10 @@
 
             .stars {
                 padding: 8px 0px;
+                display: flex;
+                img{
+                    width: 8%;
+                }
             }
 
             .btn {

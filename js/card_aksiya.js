@@ -1,17 +1,17 @@
 let card1 = document.querySelector(".aksiya .card");
 
-function productCard({image, rating, skidka, price, description}) {
+function productCard({image, rating, discount, price, description}) {
     let box = `<div class="box">
 <div class="img">
     <img src=${image} alt="">
-    <p class="skidka">-${skidka}%</p>
+    <p class="skidka">-${discount}%</p>
     <div class="heard">
         <i class="fa-regular fa-heart"></i>
     </div>
 </div>
 <div class="text">
     <div class="left">
-        <h4>${price - price*(skidka/100)} ₽</h4>
+        <h4>${(price*(1-discount/100)).toFixed(2)} ₽</h4>
         <p>С картой</p>
     </div>
     <div class="right">
@@ -28,9 +28,9 @@ function productCard({image, rating, skidka, price, description}) {
 
 return box;
 }
-
-let element1 = products.slice(-5,-1).filter((el) => el.discount > 0);
+let element1 = products.filter((el) => el.discount > 0);
 let cardValue1 = "";
+
 for(box of element1){
     cardValue1 += productCard(box);
 }

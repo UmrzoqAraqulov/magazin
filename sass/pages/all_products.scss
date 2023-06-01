@@ -2,6 +2,9 @@
 
 @import "../global";
 
+body{
+    background: rgb(251,248,236);
+}
 main {
     .joyi {
         @include mx.joy;

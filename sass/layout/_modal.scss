@@ -1,0 +1,131 @@
+#open{
+    background: transparent;
+    border: none;
+}
+
+.modal-overlay {
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: transparent;
+    z-index: -1;
+    transition: 1s;
+  }
+  
+  .modal-overlay-show {
+    background: #FCD5BACC;
+    z-index: 10;
+  }
+  
+  .modal {
+    transform: translateY(-1000%);
+    padding: 50px;
+    max-width: 600px;
+    background-color: white;
+    border-radius: 5px;
+    transition: 1s;
+    button{
+        cursor: pointer;
+    }
+    .modal-header{
+        text-align: left;
+        h3{
+            font-size: 24px;
+            padding: 20px 0px;
+            text-align: center;
+        }
+        p{
+            font-size: 18px;
+            color: #8F8F8F;
+        }
+        .num{
+            border: 1px solid #70C05B;
+            background: white;
+            padding: 10px 15px;
+            font-size: 20px;
+            border-radius: 4px;
+            width: 100%;
+        }
+        .kirish{
+            display: block;
+            padding: 10px 20px;
+            width: 100%;
+            text-align: center;
+            margin: 20px 0px;
+            background: #FCD5BA;
+            color: #FF6633;
+            border: none;
+            border-radius: 4px;
+            font-size: 24px;
+        }
+        .registr{
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            align-items: center;
+            a:nth-child(1){
+                border: 1px solid #70C05B;
+                color: #70C05B;
+                padding: 8px 15px;
+                border-radius: 4px;
+                font-size: 18px;
+            }
+            a:last-child{
+                color: #606060;
+                font-size: 18px;
+            }
+        }
+    }
+    position: relative;
+    .modal-close{
+        position: absolute;
+        top: 15px;
+        right: 15px;
+        font-size: 20px;
+        cursor: pointer;
+        &:hover{
+            color: #636262;
+        }
+    }
+  }
+  
+  .modal-show {
+    transform: translateY(0);
+  }
+
+  @media (max-width:600px){
+    .modal-overlay{
+        .modal{
+            padding: 30px;
+            &-header{
+                h3{
+                    font-size: 20px;
+                }
+                p{
+                    font-size: 14px;
+                }
+                .num{
+                    font-size: 16px;
+                }
+                .kirish{
+                    font-size: 16px;
+                }
+                .registr{
+                    flex-wrap: wrap;
+                    a:nth-child(1){
+                        font-size: 16px;
+                    }
+                    a:nth-child(2){
+                        font-size: 16px;
+                    }
+                }
+            }
+        }
+    }
+  }
+  

@@ -1,0 +1,176 @@
+@use "../abstracts/mixins" as mx;
+@import "../global";
+
+body{
+    background: rgb(251,248,236);
+}
+.main{
+
+    .sec1{
+        h2{
+            font-size: 24px;
+            color: #414141;
+            padding: 20px 0px
+        }
+        .info{
+            display: flex;
+            gap: 20px;
+            align-items: center;
+            padding: 0px 0px 20px;
+            p{
+                font-size: 16px;
+                color: #414141;
+            }
+
+            .share,.heart{
+                display: flex;
+                gap: 10px;
+            }
+        }
+        .card{
+            display: flex;
+            width: 100%;
+            &-left{
+                width: 80%;
+                display: flex;
+                gap: 20px;
+                .indicators{
+                    width: 10%;
+                    gap: 10px;
+                    display: flex;
+                    flex-direction: column;
+                    img{
+                        width: 100%;
+                        cursor: pointer;
+                    }
+                }
+                .show{
+                    width: 70%;
+                    img{
+                        width: 100%;
+                    }
+                }
+            }
+            &-right{
+                width: 45%;
+                .cost{
+                    display: flex;
+                    justify-content: space-between;
+                    .left{
+                        h4{
+                            font-size: 20px;
+                            font-weight: 500;
+                        }
+                        p{
+                            font-size: 12px;
+                        }
+                    } 
+                    .right{
+                        h4{
+                            font-size: 26px;
+                        }
+                        p{
+                            font-size: 12px;
+                        }
+                    }
+                }
+                .korzina{
+                    display: flex;
+                    justify-content: center;
+                    margin: 20px auto;
+                    width: 160px;
+                    padding: 12px 20px;
+                    background: #FF6633;
+                    border-radius: 5px;
+                    color: white;
+                    gap: 20px;
+                    cursor: pointer;
+                }
+                .brend,.loc{
+                    display: flex;
+                    justify-content: space-between;
+                    padding: 10px;
+                    p{
+                        width: 50%;
+                        font-size: 12px;
+                        color: #414141;
+                    }
+                    h4{
+                        width: 50%;
+                        font-size: 12px;
+                        color: #414141;
+                    }
+                }
+                .brend{
+                    background: #F3F2F1;
+                }
+            }
+        }
+        @media (max-width:800px){
+            h2{
+                font-size: 20px;
+            }
+            .info{
+                p{font-size: 14px}
+            }
+            .card{
+                flex-direction: column;
+                &-right{
+                    width: 80%;
+                    margin: 0 auto;
+                }
+                row-gap: 20px;
+                &-left{
+                    width: 100%;
+                    align-items: center;
+                    .indicators{
+                        width: 17%;
+                    }
+                    .show{
+                        width: 80%
+                    }
+                }
+            }
+        }
+        @media (max-width:490px){
+            h2{
+                font-size: 18px;
+            }
+            .info{
+                p{font-size: 12px}
+                flex-wrap: wrap;
+                justify-content: center;
+            }
+            .card{
+                &-right{
+                    width: 100%;
+                    .cost{
+                        .left{
+                            h4{
+                                font-size: 18px;
+                            }
+                        }
+                        .right{
+                            h4{
+                                font-size: 22px;
+                            }
+                        }
+                        .kprzinka{
+                            font-size: 14px
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    .joyi{
+        @include mx.joy;
+    }
+}
+.aksiya,.yangilar{
+    @include mx.sec;
+    padding: 20px 0px;
+}
+
+@import "../layout/footer"
