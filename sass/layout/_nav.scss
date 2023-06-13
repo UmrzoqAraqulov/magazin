@@ -100,7 +100,17 @@
 
 
          .item {
-
+            position: relative;
+            .countInKorzinaProduct{
+                position: absolute;
+                top: -20%;
+                right: 30%;
+                background: #FF6633;
+                color: white;
+                border-radius: 5px;
+                padding: 2px 4px;
+                font-size: 8px;
+            }
 
              font-size: 16px;
 
@@ -109,12 +119,12 @@
                  flex-direction: column;
                  row-gap: 6px;
                  transition: 0.5s;
-
+                color: #414141;
                  &:hover {
-                     color: gray;
+                     color: #FF6633;
 
                      p {
-                         color: blue;
+                         color: #FF6633;
                      }
                  }
 

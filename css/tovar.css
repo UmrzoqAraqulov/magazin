@@ -129,19 +129,31 @@ img {
   display: none;
 }
 .nav .menu .item {
+  position: relative;
   font-size: 16px;
+}
+.nav .menu .item .countInKorzinaProduct {
+  position: absolute;
+  top: -20%;
+  right: 30%;
+  background: #FF6633;
+  color: white;
+  border-radius: 5px;
+  padding: 2px 4px;
+  font-size: 8px;
 }
 .nav .menu .item a {
   display: flex;
   flex-direction: column;
   row-gap: 6px;
   transition: 0.5s;
+  color: #414141;
 }
 .nav .menu .item a:hover {
-  color: gray;
+  color: #FF6633;
 }
 .nav .menu .item a:hover p {
-  color: blue;
+  color: #FF6633;
 }
 .nav .menu .item i {
   font-size: 20px;
@@ -235,12 +247,13 @@ img {
 }
 
 .modal-overlay {
+  display: none;
   position: fixed;
   top: 0;
   bottom: 0;
   left: 0;
   right: 0;
-  display: flex;
+  display: none;
   align-items: center;
   justify-content: center;
   background-color: transparent;
@@ -251,6 +264,7 @@ img {
 .modal-overlay-show {
   background: rgba(252, 213, 186, 0.8);
   z-index: 10;
+  display: flex;
 }
 
 .modal {
@@ -603,10 +617,14 @@ body {
 }
 .aksiya .card .box .img, .yangilar .card .box .img {
   height: 180px;
+  transition: 0.6s;
   display: flex;
   align-items: center;
   position: relative;
   overflow: hidden;
+}
+.aksiya .card .box .img:hover img, .yangilar .card .box .img:hover img {
+  transform: scale(1.2);
 }
 .aksiya .card .box .img img, .yangilar .card .box .img img {
   width: 100%;
@@ -799,4 +817,4 @@ body {
   .footer_top .menu {
     width: 70%;
   }
-}/*# sourceMappingURL=tovar.css.map */
+}

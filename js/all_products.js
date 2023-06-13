@@ -6,7 +6,7 @@ let paginition = document.querySelector(".paginition");
 let limit = 10,active = 0, search_value = "";
 
 
-function productCard({ image, rating, price, description }) {
+function productCard({ image, rating, price, description ,id}) {
     let box = `<div class="box">
     <div class="img">
         <img src=${image} alt="">
@@ -21,7 +21,7 @@ function productCard({ image, rating, price, description }) {
     <div class="stars">
         ${getRating(rating)}
     </div>
-    <button class="btn">В корзину</button>
+    <button class="btn" onclick = "addKorzina(${id})">В корзину</button>
 </div>`
 
     return box;

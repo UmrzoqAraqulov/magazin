@@ -129,19 +129,31 @@ img {
   display: none;
 }
 .nav .menu .item {
+  position: relative;
   font-size: 16px;
+}
+.nav .menu .item .countInKorzinaProduct {
+  position: absolute;
+  top: -20%;
+  right: 30%;
+  background: #FF6633;
+  color: white;
+  border-radius: 5px;
+  padding: 2px 4px;
+  font-size: 8px;
 }
 .nav .menu .item a {
   display: flex;
   flex-direction: column;
   row-gap: 6px;
   transition: 0.5s;
+  color: #414141;
 }
 .nav .menu .item a:hover {
-  color: gray;
+  color: #FF6633;
 }
 .nav .menu .item a:hover p {
-  color: blue;
+  color: #FF6633;
 }
 .nav .menu .item i {
   font-size: 20px;
@@ -235,12 +247,13 @@ img {
 }
 
 .modal-overlay {
+  display: none;
   position: fixed;
   top: 0;
   bottom: 0;
   left: 0;
   right: 0;
-  display: flex;
+  display: none;
   align-items: center;
   justify-content: center;
   background-color: transparent;
@@ -251,6 +264,7 @@ img {
 .modal-overlay-show {
   background: rgba(252, 213, 186, 0.8);
   z-index: 10;
+  display: flex;
 }
 
 .modal {
@@ -355,11 +369,7 @@ img {
     font-size: 16px;
   }
 }
-body {
-  background: #E5E5E5;
-}
-
-.main .joyi {
+main .joyi {
   display: flex;
   gap: 10px;
   flex-wrap: wrap;
@@ -367,97 +377,188 @@ body {
   margin-top: 110px;
   font-size: 14px;
 }
-.main .joyi .home {
+main .joyi .home {
   color: black;
   font-size: 15px;
 }
-.main .joyi .page {
+main .joyi .page {
   color: #8F8F8F;
   font-size: 15px;
 }
-.main h2 {
+main h2 {
   font-size: 50px;
   padding: 20px 0px;
+  color: #414141;
+  position: relative;
 }
-.main .card {
+main h2 .countProductTitle {
+  position: absolute;
+  top: 10px;
+  font-size: 16px;
+  background: #FF6633;
+  color: white;
+  padding: 4px 6px;
+  border-radius: 4px;
+  font-weight: 500;
+}
+
+.card {
   display: flex;
   justify-content: space-between;
-  flex-wrap: wrap;
-  gap: 20px 10px;
-  padding: 10px 0px 30px;
+  display: grid;
+  row-gap: 20px;
+  grid-template-columns: repeat(4, 23%);
 }
-.main .card .box {
-  width: 32%;
+.card .box {
   background: white;
-  padding: 25px;
-  border-radius: 5px;
-  box-shadow: 1px 2px 2px rgba(0, 0, 0, 0.1);
-  transition: 0.4s;
+  padding: 5px 10px;
+  border-radius: 6px;
+  transition: 0.5s;
 }
-.main .card .box:hover {
-  box-shadow: 5px 10px 30px rgba(0, 0, 0, 0.1);
+.card .box:hover {
+  box-shadow: 4px 8px 16px rgba(255, 102, 51, 0.2);
+  transition: 0.5s;
 }
-.main .card .box h4 {
-  font-size: 24px;
-  font-weight: 700;
-  color: #313131;
+.card .box:hover .img .heard {
+  right: 0;
+}
+.card .box .img {
+  height: 180px;
+  transition: 0.6s;
+  display: flex;
+  align-items: center;
+  position: relative;
+  overflow: hidden;
+}
+.card .box .img:hover img {
+  transform: scale(1.2);
+}
+.card .box .img img {
+  width: 100%;
+}
+.card .box .img .heard {
+  position: absolute;
+  top: 0;
+  right: -20%;
+  background: #F3F2F1;
+  color: #414141;
+  padding: 5px 5px 2px 5px;
+  font-size: 18px;
+  border-radius: 3px;
+  transition: 0.5s;
+  z-index: 1;
+}
+.card .box .img .heard:hover {
+  color: red;
+}
+.card .box .text {
   padding: 10px 0px;
 }
-.main .card .box p {
-  color: #414141;
-  padding: 5px 0px;
+.card .box .info {
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
   font-size: 16px;
+  color: #414141;
+  margin: 0px 0px 10px;
 }
-.main .card .box .title {
-  font-size: 18px;
+.card .box .stars {
+  padding: 8px 0px;
+  display: flex;
 }
-.main .card .box a:hover {
-  color: blue;
+.card .box .stars img {
+  width: 8%;
+}
+.card .box .btn {
+  padding: 8px 20px;
+  border: 1px solid #70C05B;
+  border-radius: 5px;
+  background: white;
+  color: #70C05B;
+  font-size: 16px;
+  width: 100%;
+  transition: 0.5s;
+}
+.card .box .btn:hover {
+  background: #FF6633;
+  border-color: #FF6633;
+  color: white;
 }
 @media (max-width: 900px) {
-  .main h2 {
-    font-size: 45px;
+  .card {
+    grid-template-columns: repeat(3, 32%);
   }
-  .main .card .box {
-    width: 48%;
-  }
-  .main .card .box:nth-child(4), .main .card .box:nth-child(2) {
+  .card .box:nth-child(4) {
     display: none;
   }
 }
-@media (max-width: 600px) {
-  .main h2 {
-    font-size: 40px;
+@media (max-width: 680px) {
+  .card {
+    grid-template-columns: repeat(2, 48%);
   }
-  .main .card .box {
-    width: 90%;
-  }
-  .main .card .box:nth-child(3) {
+  .card .box:nth-child(3) {
     display: none;
   }
 }
-@media (max-width: 450px) {
-  .main .joyi {
-    font-size: 16px;
+@media (max-width: 460px) {
+  .card {
+    grid-template-columns: repeat(1, 100%);
+    width: 80%;
+    margin: 0 auto;
   }
-  .main .joyi .home, .main .joyi .page {
-    font-size: 16px;
-  }
-  .main h2 {
-    font-size: 35px;
-  }
-  .main .card .box {
+}
+@media (max-width: 360px) {
+  .card {
     width: 100%;
   }
-  .main .card .box h4 {
-    font-size: 18px;
-  }
-  .main .card .box p {
-    font-size: 14px;
-  }
-  .main .card .box .title {
-    font-size: 16px;
-  }
+}
+
+.card .box .img .skidka {
+  position: absolute;
+  bottom: 0;
+  color: white;
+  background: #FF6633;
+  border-radius: 3px;
+  padding: 3px 5px;
+  font-size: 14px;
+  z-index: 1;
+}
+.card .box .text {
+  display: flex;
+  justify-content: space-between;
+}
+.card .box .text p {
+  color: #BFBFBF;
+  font-size: 12px;
+  padding: 5px 0px;
+}
+.card .box .text .left h4 {
+  font-weight: 700;
+  font-size: 18px;
+}
+.card .box .text .right h4 {
+  font-weight: 400;
+  font-size: 16px;
+}
+.card .box .add {
+  display: flex;
+  justify-content: center;
+}
+.card .box .add button {
+  padding: 3px 20px;
+  border: 1.5px solid blue;
+  background: green;
+  color: white;
+  font-size: 18px;
+}
+.card .box .add button:nth-child(1) {
+  cursor: pointer;
+  border-radius: 5px 0px 0px 5px;
+}
+.card .box .add button:nth-child(3) {
+  cursor: pointer;
+  border-radius: 0px 5px 5px 0px;
 }
 
 .footer {
@@ -570,4 +671,4 @@ body {
   .footer_top .menu {
     width: 70%;
   }
-}/*# sourceMappingURL=vakansiya.css.map */
+}

@@ -1,6 +1,6 @@
 let card1 = document.querySelector(".aksiya .card");
 
-function productCard({image, rating, discount, price, description}) {
+function productCard({image, rating, discount, price, description,id}) {
     let box = `<div class="box">
 <div class="img">
     <img src=${image} alt="">
@@ -23,7 +23,7 @@ function productCard({image, rating, discount, price, description}) {
 <div class="stars">
     ${getRating(rating)}
 </div>
-<button class="btn">В корзину</button>
+<button class="btn" onclick = "addKorzina(${id})">В корзину</button>
 </div>`
 
 return box;

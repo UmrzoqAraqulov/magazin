@@ -129,19 +129,31 @@ img {
   display: none;
 }
 .nav .menu .item {
+  position: relative;
   font-size: 16px;
+}
+.nav .menu .item .countInKorzinaProduct {
+  position: absolute;
+  top: -20%;
+  right: 30%;
+  background: #FF6633;
+  color: white;
+  border-radius: 5px;
+  padding: 2px 4px;
+  font-size: 8px;
 }
 .nav .menu .item a {
   display: flex;
   flex-direction: column;
   row-gap: 6px;
   transition: 0.5s;
+  color: #414141;
 }
 .nav .menu .item a:hover {
-  color: gray;
+  color: #FF6633;
 }
 .nav .menu .item a:hover p {
-  color: blue;
+  color: #FF6633;
 }
 .nav .menu .item i {
   font-size: 20px;
@@ -235,12 +247,13 @@ img {
 }
 
 .modal-overlay {
+  display: none;
   position: fixed;
   top: 0;
   bottom: 0;
   left: 0;
   right: 0;
-  display: flex;
+  display: none;
   align-items: center;
   justify-content: center;
   background-color: transparent;
@@ -251,6 +264,7 @@ img {
 .modal-overlay-show {
   background: rgba(252, 213, 186, 0.8);
   z-index: 10;
+  display: flex;
 }
 
 .modal {
@@ -355,6 +369,10 @@ img {
     font-size: 16px;
   }
 }
+body {
+  background: #F9F4E2;
+}
+
 .main .joyi {
   display: flex;
   gap: 10px;
@@ -371,91 +389,149 @@ img {
   color: #8F8F8F;
   font-size: 15px;
 }
-.main h2 {
-  padding: 20px 0px;
+.main .header {
+  display: flex;
+  align-items: center;
+}
+.main .header .left {
+  width: 45%;
+}
+.main .header .left h2 {
   font-size: 50px;
+  font-weight: 900;
+  padding: 20px 0px;
   color: #414141;
 }
+.main .header .left p {
+  font-size: 24px;
+  color: #FF6633;
+}
+.main .header .right {
+  width: 60%;
+  background: url(../../image/kompanyInfoImage/icon.png);
+}
+.main .header .right img {
+  width: 100%;
+}
 .main .card {
-  display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  gap: 20px;
-  padding: 30px 0px 50px;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
 }
 .main .card .box {
-  height: 200px;
+  width: 37%;
+  padding: 20px 0px;
+}
+.main .card .box p {
+  font-size: 20px;
+  color: #414141;
+}
+.main .card .box h4 {
+  color: #414141;
+  font-size: 24px;
+}
+.main .card .box:nth-child(1) {
+  width: 25%;
+}
+.main .coment {
   display: flex;
-  align-items: end;
-  padding: 10px;
-  position: relative;
-  color: white;
-  border-radius: 4px;
-  background-repeat: no-repeat;
-  background-position: center;
-  font-size: 18px;
-  background: linear-gradient(180deg, rgba(112, 192, 91, 0) 0%, #6fc05b 82.81%), url(../../../image/kategoriyaImage/tuxum.png);
+  width: 80%;
+  margin: 0 auto;
+  justify-content: center;
+  gap: 50px;
+  align-items: center;
+  padding: 30px 0px;
 }
-.main .card .box:hover {
-  background: linear-gradient(180deg, rgba(255, 102, 51, 0) 0%, #FF6633 100%), url(../../../image/kategoriyaImage/tuxum.png);
+.main .coment img {
+  width: 100px;
 }
-@media (max-width: 800px) {
+.main .coment p {
+  padding: 20px;
+  background: #E5FFDE;
+  color: #70C05B;
+  font-size: 24px;
+  border-radius: 10px;
+}
+@media (max-width: 900px) {
+  .main .header .left h2 {
+    font-size: 40px;
+    padding: 20px 0px 10px;
+  }
+  .main .header .left p {
+    font-size: 20px;
+  }
+  .main .card {
+    flex-wrap: wrap;
+  }
+  .main .card .box {
+    width: 55%;
+  }
+  .main .card .box .text p {
+    font-size: 18px;
+  }
+  .main .card .box .text h4 {
+    font-size: 18px;
+    padding: 10px 0px;
+  }
+  .main .card .box:nth-child(1) {
+    width: 40%;
+  }
+  .main .card .box:last-child {
+    width: 70%;
+  }
+  .main .coment p {
+    font-size: 18px;
+  }
+}
+@media (max-width: 600px) {
   .main .joyi {
     font-size: 16px;
   }
   .main .joyi .home {
     font-size: 16px;
   }
-  .main h2 {
-    font-size: 40px;
+  .main .header .left h2 {
+    font-size: 34px;
   }
-  .main .card {
-    grid-template-columns: repeat(3, 1fr);
-  }
-}
-@media (max-width: 600px) {
-  .main h2 {
-    font-size: 36px;
-  }
-  .main .card {
-    grid-template-columns: repeat(2, 1fr);
+  .main .header .left p {
+    font-size: 18px;
   }
   .main .card .box {
+    width: 55%;
+  }
+  .main .card .box .text p {
     font-size: 16px;
   }
-  .main .card .box:nth-child(10) {
-    grid-column: 1/3;
+  .main .card .box .text h4 {
+    font-size: 16px;
   }
-  .main .card .box:nth-child(12) {
-    grid-column: 1/3;
+  .main .card .box:last-child {
+    width: 80%;
   }
-  .main .card .box:nth-child(13) {
-    grid-column: 2/3;
-    grid-row: 7/8;
+  .main .coment img {
+    width: 80px;
+  }
+  .main .coment p {
+    font-size: 16px;
+    padding: 6px 10px;
   }
 }
-@media (max-width: 400px) {
-  .main h2 {
-    font-size: 36px;
+@media (max-width: 550px) {
+  .main .header .left {
+    width: 100%;
+    background: url(../../image/kompanyInfoImage/icon.png);
   }
-  .main .card {
-    grid-template-columns: 1fr;
+  .main .header .right {
+    display: none;
   }
   .main .card .box {
-    background-repeat: no-repeat;
-    background-position: center;
+    width: 100%;
   }
-  .main .card .box:nth-child(1) {
-    grid-column: 1/2;
+  .main .card .box:last-child, .main .card .box:nth-child(1) {
+    width: 100%;
   }
-  .main .card .box:nth-child(10) {
-    grid-column: 1/2;
-  }
-  .main .card .box:nth-child(12) {
-    grid-column: 1/2;
-  }
-  .main .card .box:nth-child(13) {
-    grid-column: 1/2;
-    grid-row: 7/8;
+  .main .coment {
+    flex-wrap: wrap;
   }
 }
 
@@ -569,4 +645,4 @@ img {
   .footer_top .menu {
     width: 70%;
   }
-}/*# sourceMappingURL=moloko.css.map */
+}

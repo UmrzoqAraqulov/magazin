@@ -45,7 +45,12 @@
 
             .img {
                 height: 180px;
-
+                transition: .6s;
+                &:hover{
+                    img{
+                        transform: scale(1.2);
+                    }
+                }
                 img {
                     width: 100%;
                 }
@@ -55,7 +60,7 @@
                 position: relative;
                 overflow: hidden;
 
-                .heard {
+                .heard { 
                     position: absolute;
                     top: 0;
                     right: -20%;

@@ -8,21 +8,14 @@
     <title>Ceвepянoчкa</title>
     <link rel="icon" href="image/homeImage/lcon.png">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
-    <link rel="stylesheet" href="sass/pages/home.css">
-    <link
-    rel="stylesheet"
-    href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css"
-    integrity="sha512-tS3S5qG0BlhnQROyJXvNjeEM4UpMXHrQfTGmbQ1gKmelCxlSEBUaxhRBj/EFTzpbP4RVSrpEikbmdJobCvhE3g=="
-    crossorigin="anonymous"
-    referrerpolicy="no-referrer"
-  /> 
-  <link
-    rel="stylesheet"
-    href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css"
-    integrity="sha512-sMXtMNL1zRzolHYKEujM2AqCLUR9F2C4/05cdbxjjLSRvMQIciEPCQZo++nk7go3BtSuK9kfa/s+a4f4i5pLkw=="
-    crossorigin="anonymous"
-    referrerpolicy="no-referrer"
-  />
+    <link rel="stylesheet" href="css/home.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css"
+        integrity="sha512-tS3S5qG0BlhnQROyJXvNjeEM4UpMXHrQfTGmbQ1gKmelCxlSEBUaxhRBj/EFTzpbP4RVSrpEikbmdJobCvhE3g=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css"
+        integrity="sha512-sMXtMNL1zRzolHYKEujM2AqCLUR9F2C4/05cdbxjjLSRvMQIciEPCQZo++nk7go3BtSuK9kfa/s+a4f4i5pLkw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
 </head>
 
 <body>
@@ -77,9 +70,10 @@
                     </a>
                 </li>
                 <li class="item">
-                    <a href="#">
+                    <a href="korzina.html">
                         <i class="fa-solid fa-cart-shopping"></i>
                         <p>Корзина</p>
+                        <span class="countInKorzinaProduct">0</span>
                     </a>
                 </li>
                 <button id="open">
@@ -93,29 +87,30 @@
                 </button>
                 <div class="modal-overlay">
                     <div class="modal">
-                      <div class="modal-header">
-                        <h3>Вход</h3>
-                        <p>Телефон</p>
-                        <input class="num" type="text" placeholder="+998 91 777 77 77">
-                        <button class="kirish">Вход</button>
-                        <div class="registr">
-                            <a href="#">Регистрация</a>
-                            <a href="#">Забыли пароль?</a>
+                        <div class="modal-header">
+                            <h3>Вход</h3>
+                            <p>Телефон</p>
+                            <input class="num" type="text" placeholder="+998 91 777 77 77">
+                            <button class="kirish">Вход</button>
+                            <div class="registr">
+                                <a href="#">Регистрация</a>
+                                <a href="#">Забыли пароль?</a>
+                            </div>
                         </div>
-                      </div>
-                      <div class="modal-body"></div>
-                      <div class="modal-close">
-                        <i class="fa-solid fa-xmark"></i>
-                      </div>
+                        <div class="modal-body"></div>
+                        <div class="modal-close">
+                            <i class="fa-solid fa-xmark"></i>
+                        </div>
                     </div>
-                  </div>
-                
+                </div>
             </ul>
         </div>
     </div>
     <div class="header">
-        <img src="image/homeImage/header.png" alt="">
-        <h1>Доставка бесплатно от 1000 ₽</h1>
+        <div class="container">
+            <img src="image/homeImage/header.png" alt="">
+            <h1>Доставка бесплатно от 1000 ₽</h1>
+        </div>
     </div>
 
     <div class="aksiya container">
@@ -331,19 +326,15 @@
     <script src="js/card_aksiya.js"></script>
     <script src="js/card_new.js"></script>
     <script src="js/modal.js"></script>
+    <script src="js/korzina.js"></script>
 
-    <script
-    src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.0/jquery.min.js"
-    integrity="sha512-3gJwYpMe3QewGELv8k/BX9vcqhryRdzRMxVfq6ngyWXwo03GFEzjsUm8Q7RZcHPHksttq7/GFoxjCVUjkjvPdw=="
-    crossorigin="anonymous"
-    referrerpolicy="no-referrer"
-  ></script>
-  <script
-    src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"
-    integrity="sha512-bPs7Ae6pVvhOSiIcyUClR7/q2OAsRiovw4vAkX+zJbw3ShAeeqezq50RIIcIURq7Oa20rW2n2q+fyXBNcU9lrw=="
-    crossorigin="anonymous"
-    referrerpolicy="no-referrer"
-  ></script>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.0/jquery.min.js"
+        integrity="sha512-3gJwYpMe3QewGELv8k/BX9vcqhryRdzRMxVfq6ngyWXwo03GFEzjsUm8Q7RZcHPHksttq7/GFoxjCVUjkjvPdw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"
+        integrity="sha512-bPs7Ae6pVvhOSiIcyUClR7/q2OAsRiovw4vAkX+zJbw3ShAeeqezq50RIIcIURq7Oa20rW2n2q+fyXBNcU9lrw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
     <script src="js/owl-carusel.js"></script>
 
 </body>

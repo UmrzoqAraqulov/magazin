@@ -4,12 +4,13 @@
 }
 
 .modal-overlay {
+    display: none;
     position: fixed;
     top: 0;
     bottom: 0;
     left: 0;
     right: 0;
-    display: flex;
+    display: none;
     align-items: center;
     justify-content: center;
     background-color: transparent;
@@ -20,6 +21,7 @@
   .modal-overlay-show {
     background: #FCD5BACC;
     z-index: 10;
+    display: flex;
   }
   
   .modal {
